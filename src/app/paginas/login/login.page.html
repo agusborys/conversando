@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="secondaryBackground">
+    <div class="titulo">
+        <h1 style="font-weight: bolder;font-size: 40px">Conversando <br>en el Aula</h1>
+      </div>
+  <div style="margin-top: 25px">
+      <img style="width: 200px;height:200px;" class="imagen" src="../../../assets/icon/charlar.png">
+  </div>
+  <div class="titulo">
+    <h1>Iniciar Sesión</h1>
+  </div>
+    <ion-item class="inputs">          
+        <ion-label style="color: whitesmoke" position="floating">Correo</ion-label>
+        <ion-input type="text" name="email"  [(ngModel)]="email" required></ion-input>
+    </ion-item>
+      <ion-item class="inputs">          
+          <ion-label style="color: whitesmoke" position="floating">Contraseña</ion-label>
+          <ion-input type="password" name="password"  [(ngModel)]="password" required></ion-input>
+      </ion-item>
+          <ion-button style="width: 230px;height: 40px;" fill="outline" class="ingresar" expand="block" (click)="abrirAlert()">
+              <ion-icon name="ios-people"></ion-icon>Seleccionar Usuario</ion-button>
+      <ion-button fill="outline" class="ingresar" expand="block" (click)="Login()">
+          <ion-icon name="md-exit"></ion-icon>
+          Ingresar</ion-button>
+
+
+</ion-content>

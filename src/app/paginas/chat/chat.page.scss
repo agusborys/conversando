@@ -1,0 +1,123 @@
+// .mensajeOtros{
+//     border-radius: 5px 5px 5px 0px;
+//     color: black;
+//     margin-top: 5px;
+//     max-width: 80%;
+//     height: 100px;
+//     font-size: 20px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #bdbdbd;
+//     justify-content: left;
+//     text-align: left;
+//     float: left;
+// }
+// .mensajeMio{
+//     border-radius: 5px 5px 0px 5px;
+//     color: black;
+//     margin-top: 5px;
+//     max-width: 80%;
+//     height: 100px;
+//     font-size: 20px;
+//     display: flex;
+//     background-color: #78909c;
+//     justify-content: right;
+//     text-align: right;
+//     float: right;
+// }
+// .autor{
+//     font-weight: bolder;
+//     font-size: 15px;
+//     color: black;
+
+// }
+// .fecha{
+//     font-size: 10px;
+//     color:#616161;
+// }
+// .chat{
+//     font-size: 15px;
+//     color: black;
+// }
+.mensaje{
+    padding: 5px;
+    display: flex;
+    flex: 1;
+    border:0;
+    border-bottom: 1px #616161;
+    border-style: solid;
+    width: 100%;
+}
+ion-footer {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
+    background-color: whitesmoke;
+    //height: 255px;
+  }
+  ion-content{
+    --background: #cfd8dc;
+    padding: 2px;
+  }
+.line-breaker {
+    white-space: pre-line;
+  }
+
+  .message-wrap {
+    padding: 0 2px;
+    .message {
+      position: relative;
+      padding: 2px 0;
+      .msg-detail {
+        width: 100%;
+        display: inline-block;
+        p {
+          margin: 0;
+        }
+        .msg-info {
+          p {
+            font-size: .8em;
+            color: black;
+          }
+        }
+
+        .msg-content {
+          position: relative;
+          margin-top: 5px;
+          border-radius: 5px;
+          padding: 8px;
+          //border: 1px solid #ddd;
+          color: black;
+          width: auto;
+          max-width: 80%;
+        }
+
+      }
+    }
+    .message.left {
+      .msg-content {
+        background-color: #bdbdbd;
+        float: left;
+      }
+      .msg-detail {
+        padding-left: 5px;
+      }
+      .msg-content {
+        color: black;
+      }
+
+    }
+
+    .message.right {
+      .msg-detail {
+        padding-right: 5px;
+        .msg-info {
+          text-align: right;
+        }
+      }
+      .msg-content {
+        background-color: #2286c3;
+        float: right;
+      }
+
+    }
+}

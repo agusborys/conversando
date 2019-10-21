@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="font-weight: bolder; text-align: center">Inicio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="LogOut()">
+        <ion-icon style="color: whitesmoke" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll" style="--background:#cfd8dc">
+  <div style="display: flex; flex-direction:column; height:100%">
+    <ion-button shape="round" expand="full" class="botones" style="--background:#2286c3" (click)='pps_4a()' >
+        <ion-icon name="ios-contacts"></ion-icon>
+          <div>PPS-4A</div>
+      </ion-button>
+    <ion-button shape="round" expand="full" class="botones" style="--background:#00867d" (click)="pps_4b()">
+        <ion-icon name="md-contacts"></ion-icon>PPS-4B
+    </ion-button>
+  </div>
+
+  
+</ion-content>

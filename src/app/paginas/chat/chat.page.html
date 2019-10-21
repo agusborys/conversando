@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar style="--background:#2286c3">
+      <ion-buttons slot="start">
+        <ion-button (click)="goBack()">
+          <ion-icon style="color: whitesmoke" name="md-arrow-round-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-title style="font-weight: bolder; text-align: center; color: whitesmoke">PPS-4A</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="scrollToBottom()">
+        <ion-icon style="color: whitesmoke" name="ios-arrow-dropdown-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="chats.length==0"><h1>No hay mensajes en la sala de chat</h1></div>
+<div *ngIf="chats.length!=0" class="message-wrap">
+
+    <div *ngFor="let mensaje of chats"
+         class="message left"
+         [class.left]="yo != mensaje.usuario"
+         [class.right]="yo == mensaje.usuario"
+         >
+      <div class="msg-detail">
+        <div class="msg-content">
+          <p *ngIf="yo!=mensaje.usuario" style="font-size: 13px"><b>{{mensaje.usuario}}</b></p>
+            <p style="color:rgb(54, 54, 54); font-size: 11px">{{mensaje.fecha | date:'medium'}}</p>
+            <hr>
+          <p class="line-breaker ">{{mensaje.mensaje}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div
+         class="message right"
+        >
+      <div class="msg-detail">
+        <div class="msg-info">
+            <p><b>msg.userName</b>
+              <br> fecha</p>
+        </div>
+        <div class="msg-content">
+          <p class="line-breaker ">msg.message</p>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <textarea placeholder="Escriba mensaje..." class="mensaje" [(ngModel)]="mensajeEnviar"></textarea>
+    <ion-buttons slot="end">
+      <ion-button (click)="EnviarMensaje()">
+        <ion-icon style="color: #2286c3" name="md-send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
